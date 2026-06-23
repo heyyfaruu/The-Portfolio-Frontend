@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL =
-  "https://the-portfolio-backend-e162.onrender.com/api/projects/api/projects";
+  "https://the-portfolio-backend-e162.onrender.com/api/projects";
 
 export const getAllProjects = async () => {
   return await axios.get(API_URL);
