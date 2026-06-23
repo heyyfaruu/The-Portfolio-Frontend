@@ -32,9 +32,9 @@ function Contact() {
       };
 
       await axios.post(
-        "https://the-portfolio-backend-e162.onrender.com/api/projects / api / feedback",
-        feedbackData
-      );
+  "https://the-portfolio-backend-e162.onrender.com/api/feedback",
+  feedbackData
+);
 
       setSuccessMessage("Feedback submitted successfully!");
 
