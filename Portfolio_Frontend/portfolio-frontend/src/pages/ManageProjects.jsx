@@ -13,7 +13,7 @@ function ManageProjects() {
   const fetchProjects = async () => {
     try {
       const response = await axios.get(
-        "https://the-portfolio-backend-e162.onrender.com/api/projects / api / projects"
+        "https://the-portfolio-backend-e162.onrender.com/api/projects"
       );
 
       setProjects(response.data);
@@ -33,7 +33,7 @@ function ManageProjects() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects/${id}`,
+        `https://the-portfolio-backend-e162.onrender.com/api/projects/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

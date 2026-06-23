@@ -23,7 +23,7 @@ function EditProject() {
   const fetchProject = async () => {
     try {
       const response = await axios.get(
-        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects`
+        `https://the-portfolio-backend-e162.onrender.com/api/projects`
       );
 
       const selectedProject = response.data.find(
@@ -59,7 +59,7 @@ function EditProject() {
       console.log("Project ID:", id);
 
       const response = await axios.put(
-        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects/${id}`,
+        `https://the-portfolio-backend-e162.onrender.com/api/projects/${id}`,
         project,
         {
           headers: {
