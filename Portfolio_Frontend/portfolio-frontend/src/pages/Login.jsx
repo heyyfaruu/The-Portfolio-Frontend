@@ -29,25 +29,25 @@ function Login() {
     try {
 
       const response = await axios.post(
-  "http://https://the-portfolio-backend-e162.onrender.com/api/auth/login",
-  formData
-);
+        "https://the-portfolio-backend-e162.onrender.com/api/projects / api / auth / login",
+        formData
+      );
 
-if (
-  response.data === "Invalid Password" ||
-  response.data === "User Not Found"
-) {
+      if (
+        response.data === "Invalid Password" ||
+        response.data === "User Not Found"
+      ) {
 
-  setError(response.data);
-  return;
-}
+        setError(response.data);
+        return;
+      }
 
-localStorage.setItem(
-  "token",
-  response.data
-);
+      localStorage.setItem(
+        "token",
+        response.data
+      );
 
-navigate("/dashboard");
+      navigate("/dashboard");
 
     } catch (error) {
 

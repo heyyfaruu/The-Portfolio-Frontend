@@ -33,7 +33,7 @@ function AddProject() {
     try {
 
       await axios.post(
-        "http://https://the-portfolio-backend-e162.onrender.com/api/projects",
+        "https://the-portfolio-backend-e162.onrender.com/api/projects / api / projects",
         project,
         {
           headers: {

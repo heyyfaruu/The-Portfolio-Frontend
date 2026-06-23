@@ -23,7 +23,7 @@ function EditProject() {
   const fetchProject = async () => {
     try {
       const response = await axios.get(
-        `http://https://the-portfolio-backend-e162.onrender.com/api/projects`
+        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects`
       );
 
       const selectedProject = response.data.find(
@@ -45,33 +45,33 @@ function EditProject() {
     });
   };
 
-  
+
 
   const handleUpdate = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  console.log("UPDATE BUTTON CLICKED");
+    console.log("UPDATE BUTTON CLICKED");
 
-  try {
+    try {
       const token = localStorage.getItem("token");
 
-        console.log("Project Data:", project);
-        console.log("Project ID:", id);
+      console.log("Project Data:", project);
+      console.log("Project ID:", id);
 
       const response = await axios.put(
-  `http://https://the-portfolio-backend-e162.onrender.com/api/projects/${id}`,
-  project,
-  {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  }
-);
+        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects/${id}`,
+        project,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
-console.log("UPDATE RESPONSE", response.data);
-toast.success("Project Updated Successfully");
-navigate("/manage-projects");
-    
+      console.log("UPDATE RESPONSE", response.data);
+      toast.success("Project Updated Successfully");
+      navigate("/manage-projects");
+
 
       toast.success("Project Updated Successfully");
       navigate("/manage-projects");
@@ -81,7 +81,7 @@ navigate("/manage-projects");
     }
   };
 
-  
+
 
   return (
     <div className="min-h-screen bg-[#020b2d] text-white p-10">

@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 function ManageProjects() {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = async () => {
     try {
       const response = await axios.get(
-        "http://https://the-portfolio-backend-e162.onrender.com/api/projects"
+        "https://the-portfolio-backend-e162.onrender.com/api/projects / api / projects"
       );
 
       setProjects(response.data);
@@ -33,7 +33,7 @@ function ManageProjects() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://https://the-portfolio-backend-e162.onrender.com/api/projects/${id}`,
+        `https://the-portfolio-backend-e162.onrender.com/api/projects"/api/projects/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -84,18 +84,18 @@ function ManageProjects() {
 
             <div className="flex gap-3 mt-6">
               <button
-  onClick={() => navigate(`/edit-project/${project.id}`)}
-  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg cursor-pointer transition-all duration-300"
->
-  Edit
-</button>
+                onClick={() => navigate(`/edit-project/${project.id}`)}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg cursor-pointer transition-all duration-300"
+              >
+                Edit
+              </button>
 
-<button
-  onClick={() => handleDelete(project.id)}
-  className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg cursor-pointer transition-all duration-300"
->
-  Delete
-</button>
+              <button
+                onClick={() => handleDelete(project.id)}
+                className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg cursor-pointer transition-all duration-300"
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))}
