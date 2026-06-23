@@ -11,7 +11,7 @@ function AdminFeedback() {
   const fetchFeedbacks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/feedback"
+        "http://https://the-portfolio-backend-e162.onrender.com/api/feedback"
       );
 
       setFeedbacks(response.data);

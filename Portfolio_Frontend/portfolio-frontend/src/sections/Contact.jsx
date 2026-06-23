@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
     };
 
     await axios.post(
-      "http://localhost:8080/api/feedback",
+      "http://https://the-portfolio-backend-e162.onrender.com/api/feedback",
       feedbackData
     );
 
